@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Audio Samples</title>
+  <style>
+body {
+  margin:0;
+  padding:10px 30px;
+  background: #fff;
+  color: #111;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+audio {
+  width: 250px;
+  margin-right: 10px;
+}
+.sample {
+  font-size: 0.9em;
+  font-style: italic;
+  border: 1px solid #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+</style>
+</head>
+<body>
+  <h2><b>This is a demo of adversarial attacks on ASV systems.</b></h2>
+<!--   <ul>
+    <li>Here you will listen to some audios of non-categories in L2 English speech, where the speakers' L1 language is Cantonese. </li>
+    <li>Each non-categorical pattern is represented as 'phn1_phn2', indicating that this pattern sounds like a resemblance of two native English phones, 'phn1' and 'phn2'.</li>
+    <li>The International Phonetic Alphabet (IPA) form of the native phones is also provided in the parenthesis for your reference.</li>
+    <li>For comparison, some audios of native-like pronunciations are also listed below for your reference.</li>
+  </ul> -->
+  <div style="position:absolute;left:60px">
+  <h3>Spoofing audios (generated from LPMS-ivec) under different perturbation degree &epsilon, and also the system response. (TR: True Rejection; FA: False Acceptance)</h3>
+    <table border="1">
+      <tr>
+        <td align="center" >Target (enroll)</td>
+        <td align="center" >Original (test)</td>
+        <td align="center" >&epsilon = 0.3</td>
+        <td align="center" >&epsilon = 1.0</td>
+        <td align="center" >&epsilon = 5.0</td>
+        <td align="center" >&epsilon = 10.0</td>
+        <td align="center" >&epsilon = 20.0</td>
+        <td align="center" >&epsilon = 30.0</td>
+        <td align="center" >&epsilon = 50.0</td>
+      </tr>
+      <tr>
+        <td align="center" >
+          <audio controls>
+          <source src="non-target-trials/id10270-5r0dWxy17C8-00003.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td align="center" >
+          <audio controls>
+          <source src="non-target-trials/id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td align="center" >
+          <audio controls>
+          <source src="non-target-trials/0_3_id10270-5r0dWxy17C8-00003_id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td align="center" >
+          <audio controls>
+          <source src="non-target-trials/1_id10270-5r0dWxy17C8-00003_id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td align="center" >
+          <audio controls>
+          <source src="non-target-trials/5_scaled_id10270-5r0dWxy17C8-00003_id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td align="center" >
+          <audio controls>
+          <source src="non-target-trials/10_scaled_id10270-5r0dWxy17C8-00003_id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td align="center" >
+          <audio controls>
+          <source src="non-target-trials/20_scaled_id10270-5r0dWxy17C8-00003_id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td align="center" >
+          <audio controls>
+          <source src="non-target-trials/30_scaled_id10270-5r0dWxy17C8-00003_id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td align="center" >
+          <audio controls>
+          <source src="non-target-trials/50_scaled_id10270-5r0dWxy17C8-00003_id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" >LPMS-ivec</td>
+        <td align="center" rowspan="2">TR</td>
+        <td align="center" rowspan="2"><b>FA</b><b>FA</b></td>
+        <td align="center" rowspan="2"><b>FA</b></td>
+        <td align="center" rowspan="2"><b>FA</b></td>
+        <td align="center" rowspan="2">TR</td>
+        <td align="center" rowspan="2">--</td>
+        <td align="center" rowspan="2">--</td>
+        <td align="center" rowspan="2">--</td>
+      </tr>
+      <tr>
+        <td align="center" >(white box attack)</td>
+      </tr>
+      <tr>
+        <td align="center" >MFCC-ivec</td>
+        <td align="center" rowspan="2">TR</td>
+        <td align="center" rowspan="2">TR</td>
+        <td align="center" rowspan="2">TR</td>
+        <td align="center" rowspan="2"><b>FA</b></td>
+        <td align="center" rowspan="2"><b>FA</b></td>
+        <td align="center" rowspan="2"><b>FA</b></td>
+        <td align="center" rowspan="2"><b>FA</b></td>
+        <td align="center" rowspan="2">TR</td>
+      </tr>
+      <tr>
+        <td align="center" >(cross feature)</td>
+      </tr>
+      <tr>
+        <td align="center" >MFCC-xvec</td>
+        <td align="center" rowspan="2">TR</td>
+        <td align="center" rowspan="2">TR</td>
+        <td align="center" rowspan="2">TR</td>
+        <td align="center" rowspan="2">TR</td>
+        <td align="center" rowspan="2">TR</td>
+        <td align="center" rowspan="2"><b>FA</b></td>
+        <td align="center" rowspan="2">TR</td>
+        <td align="center" rowspan="2">TR</td>
+      </tr>
+      <tr>
+        <td align="center" >(cross both)</td>
+      </tr>
+    </table>
+
+</div>
+</body>
+</html>
