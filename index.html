@@ -39,108 +39,110 @@ audio {
     <li>For comparison, some audios of native-like pronunciations are also listed below for your reference.</li>
   </ul> -->
   <div style="position:absolute;left:60px">
-  <h3>Spoofing audios (generated from LPMS-ivec) under different perturbation degree &epsilon, and also the system response. (TR: True Rejection; FA: False Acceptance)</h3>
+<ul>
+  <li>Spoofing audios (generated from LPMS-ivec) under different perturbation degree &epsilon;, and also the system response. (<b>TR</b>: True Rejection; <b>FA</b>: False Acceptance)</li>
+</ul>
     <table border="1">
       <tr>
         <td align="center" >Target (enroll)</td>
         <td align="center" >Original (test)</td>
-        <td align="center" >&epsilon = 0.3</td>
-        <td align="center" >&epsilon = 1.0</td>
-        <td align="center" >&epsilon = 5.0</td>
-        <td align="center" >&epsilon = 10.0</td>
-        <td align="center" >&epsilon = 20.0</td>
-        <td align="center" >&epsilon = 30.0</td>
-        <td align="center" >&epsilon = 50.0</td>
+        <td align="center" >&epsilon; = 0.3</td>
+        <td align="center" >&epsilon; = 1.0</td>
+        <td align="center" >&epsilon; = 5.0</td>
+        <td align="center" >&epsilon; = 10.0</td>
+        <td align="center" >&epsilon; = 20.0</td>
+        <td align="center" >&epsilon; = 30.0</td>
+        <td align="center" >&epsilon; = 50.0</td>
       </tr>
       <tr>
         <td align="center" >
-          <audio controls>
+          <audio controls="controls" height="100" width="100">
           <source src="non-target-trials/id10270-5r0dWxy17C8-00003.wav" type="audio/wav">
           </audio>
         </td>
         <td align="center" >
-          <audio controls>
+          <audio controls="controls" height="100" width="100">
           <source src="non-target-trials/id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
           </audio>
         </td>
         <td align="center" >
-          <audio controls>
+          <audio controls="controls" height="100" width="100">
           <source src="non-target-trials/0_3_id10270-5r0dWxy17C8-00003_id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
           </audio>
         </td>
         <td align="center" >
-          <audio controls>
+          <audio controls="controls" height="100" width="100">
           <source src="non-target-trials/1_id10270-5r0dWxy17C8-00003_id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
           </audio>
         </td>
         <td align="center" >
-          <audio controls>
+          <audio controls="controls" height="100" width="100">
           <source src="non-target-trials/5_scaled_id10270-5r0dWxy17C8-00003_id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
           </audio>
         </td>
         <td align="center" >
-          <audio controls>
+          <audio controls="controls" height="100" width="100">
           <source src="non-target-trials/10_scaled_id10270-5r0dWxy17C8-00003_id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
           </audio>
         </td>
         <td align="center" >
-          <audio controls>
+          <audio controls="controls" height="100" width="100">
           <source src="non-target-trials/20_scaled_id10270-5r0dWxy17C8-00003_id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
           </audio>
         </td>
         <td align="center" >
-          <audio controls>
+          <audio controls="controls" height="100" width="100">
           <source src="non-target-trials/30_scaled_id10270-5r0dWxy17C8-00003_id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
           </audio>
         </td>
         <td align="center" >
-          <audio controls>
+          <audio controls="controls" height="100" width="100">
           <source src="non-target-trials/50_scaled_id10270-5r0dWxy17C8-00003_id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
           </audio>
         </td>
       </tr>
       <tr>
-        <td align="center" >LPMS-ivec</td>
-        <td align="center" rowspan="2">TR</td>
-        <td align="center" rowspan="2"><b>FA</b><b>FA</b></td>
-        <td align="center" rowspan="2"><b>FA</b></td>
-        <td align="center" rowspan="2"><b>FA</b></td>
-        <td align="center" rowspan="2">TR</td>
-        <td align="center" rowspan="2">--</td>
-        <td align="center" rowspan="2">--</td>
-        <td align="center" rowspan="2">--</td>
+        <td align="center" >LPMS-ivec<br />(white box attack)</td>
+        <td align="center">TR</td>
+        <td align="center"><b>FA</b></td>
+        <td align="center"><b>FA</b></td>
+        <td align="center"><b>FA</b></td>
+        <td align="center">TR</td>
+        <td align="center">--</td>
+        <td align="center">--</td>
+        <td align="center">--</td>
       </tr>
-      <tr>
+<!--       <tr>
         <td align="center" >(white box attack)</td>
-      </tr>
+      </tr> -->
       <tr>
-        <td align="center" >MFCC-ivec</td>
-        <td align="center" rowspan="2">TR</td>
-        <td align="center" rowspan="2">TR</td>
-        <td align="center" rowspan="2">TR</td>
-        <td align="center" rowspan="2"><b>FA</b></td>
-        <td align="center" rowspan="2"><b>FA</b></td>
-        <td align="center" rowspan="2"><b>FA</b></td>
-        <td align="center" rowspan="2"><b>FA</b></td>
-        <td align="center" rowspan="2">TR</td>
+        <td align="center" >MFCC-ivec<br />(cross feature)</td>
+        <td align="center">TR</td>
+        <td align="center">TR</td>
+        <td align="center">TR</td>
+        <td align="center"><b>FA</b></td>
+        <td align="center"><b>FA</b></td>
+        <td align="center"><b>FA</b></td>
+        <td align="center"><b>FA</b></td>
+        <td align="center">TR</td>
       </tr>
-      <tr>
+<!--       <tr>
         <td align="center" >(cross feature)</td>
-      </tr>
+      </tr> -->
       <tr>
-        <td align="center" >MFCC-xvec</td>
-        <td align="center" rowspan="2">TR</td>
-        <td align="center" rowspan="2">TR</td>
-        <td align="center" rowspan="2">TR</td>
-        <td align="center" rowspan="2">TR</td>
-        <td align="center" rowspan="2">TR</td>
-        <td align="center" rowspan="2"><b>FA</b></td>
-        <td align="center" rowspan="2">TR</td>
-        <td align="center" rowspan="2">TR</td>
+        <td align="center" >MFCC-xvec<br />(cross both)</td>
+        <td align="center">TR</td>
+        <td align="center">TR</td>
+        <td align="center">TR</td>
+        <td align="center">TR</td>
+        <td align="center">TR</td>
+        <td align="center"><b>FA</b></td>
+        <td align="center">TR</td>
+        <td align="center">TR</td>
       </tr>
-      <tr>
+<!--       <tr>
         <td align="center" >(cross both)</td>
-      </tr>
+      </tr> -->
     </table>
 
 </div>
