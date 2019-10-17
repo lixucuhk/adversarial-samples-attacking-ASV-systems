@@ -32,14 +32,14 @@ audio {
 </head>
 <body>
   <h2><b>Adversarial Samples from "Adversarial Attack on GMM i-vector based Speaker Verification Systems".</b></h2>
-  <h3><b>authors</b>:Xu Li, Jinghua Zhong, Xixin Wu, Jianwei Yu, Xunying Liu and Helen Meng</h3>
-  <h3><b>abstract</b>:<br \>
-  This work investigates the vulnerability of gaussian mixture model (GMM) i-vector based speaker verification (SV) systems to adversarial attacks, and also the attack transferability in terms of cross feature, cross model architecture (DNN xvector based systems) and cross both cases. In details, we formulate the GMM i-vector based SV systems as a scoring function, and leverage one of adversarial attack methods, i.e. fast gradient sign method (FSGM), to generate adversarial examples through the systems. These adversarial examples are used to perform both white and black box attacks. We compare the equal error rate of the systems before and under attacks. Experiment results show that GMM i-vector systems are seriously vulnerable to adversarial attacks, and the adversarial transferability to NN based systems (x-vector systems) also prove to be effective.</h3>
+  <li><b>Authors</b>:Xu Li, Jinghua Zhong, Xixin Wu, Jianwei Yu, Xunying Liu and Helen Meng</li>
+  <li><b>Abstract</b>:<br \>
+  This work investigates the vulnerability of gaussian mixture model (GMM) i-vector based speaker verification (SV) systems to adversarial attacks, and also the attack transferability in terms of cross feature, cross model architecture (DNN xvector based systems) and cross both cases. In details, we formulate the GMM i-vector based SV systems as a scoring function, and leverage one of adversarial attack methods, i.e. fast gradient sign method (FSGM), to generate adversarial examples through the systems. These adversarial examples are used to perform both white and black box attacks. We compare the equal error rate of the systems before and under attacks. Experiment results show that GMM i-vector systems are seriously vulnerable to adversarial attacks, and the adversarial transferability to NN based systems (x-vector systems) also prove to be effective.</li>
 
   <h2>System Description</h2>
-  <h3><b>LPMS-ivec</b>: Log power magnitude spectrum based i-vector SV system</h3>
-  <h3><b>MFCC-ivec</b>: Mel-frequency cepstral coefficients based i-vector SV system</h3>
-  <h3><b>MFCC-xvec</b>: Mel-frequency cepstral coefficients based x-vector SV system</h3>
+  <li><b>LPMS-ivec</b>: Log power magnitude spectrum based i-vector SV system</li>
+  <li><b>MFCC-ivec</b>: Mel-frequency cepstral coefficients based i-vector SV system</li>
+  <li><b>MFCC-xvec</b>: Mel-frequency cepstral coefficients based x-vector SV system</li>
 <!--   <ul>
     <li>Here you will listen to some audios of non-categories in L2 English speech, where the speakers' L1 language is Cantonese. </li>
     <li>Each non-categorical pattern is represented as 'phn1_phn2', indicating that this pattern sounds like a resemblance of two native English phones, 'phn1' and 'phn2'.</li>
@@ -47,9 +47,9 @@ audio {
     <li>For comparison, some audios of native-like pronunciations are also listed below for your reference.</li>
   </ul> -->
   <h2>Spoofing audios (generated from LPMS-ivec) under different perturbation degree &epsilon;, and the corresponding system response.</h2>
-  <h3><b>TR</b>: True Rejection; <b>FA</b>: False Acceptance</h3>
-  <div style="position:absolute;left:60px">
-    <h3>&epsilon; = 0.3, 1.0, 5.0, 10.0 </h3>
+  <li><b>TR</b>: True Rejection; <b>FA</b>: False Acceptance</li>
+  <div style="position:absolute;left:0px">
+    <li>&epsilon; = 0.3, 1.0, 5.0, 10.0 </li>
 
     <table border="1">
       <tr>
@@ -158,7 +158,7 @@ audio {
       </tr>
     </table>
 
-    <h3>&epsilon; = 20.0, 30.0, 50.0 </h3>
+    <li>&epsilon; = 20.0, 30.0, 50.0 </li>
 
     <table border="1">
       <tr>
