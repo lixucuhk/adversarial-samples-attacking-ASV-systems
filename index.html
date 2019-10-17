@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Audio Samples</title>
+  <title>adversarial-samples-attacking-ASV-systems</title>
   <style>
 body {
   margin:0;
@@ -31,23 +31,42 @@ audio {
 </style>
 </head>
 <body>
-  <h2><b>This is a demo of adversarial attacks on ASV systems.</b></h2>
+  <h2><b>Adversarial Samples from "Adversarial Attack on GMM i-vector based Speaker Verification Systems".</b></h2>
+  <h3><b>authors</b>:Xu Li, Jinghua Zhong, Xixin Wu, Jianwei Yu, Xunying Liu and Helen Meng</h3>
+  <h3><b>abstract</b>:<br \>
+  This work investigates the vulnerability of gaussian mixture model (GMM) i-vector based speaker verification (SV) systems to adversarial attacks, and also the attack transferability in terms of cross feature, cross model architecture (DNN xvector based systems) and cross both cases. In details, we formulate the GMM i-vector based SV systems as a scoring function, and leverage one of adversarial attack methods, i.e. fast gradient sign method (FSGM), to generate adversarial examples through the systems. These adversarial examples are used to perform both white and black box attacks. We compare the equal error rate of the systems before and under attacks. Experiment results show that GMM i-vector systems are seriously vulnerable to adversarial attacks, and the adversarial transferability to NN based systems (x-vector systems) also prove to be effective.</h3>
+
+  <h2>System Description</h2>
+  <h3><b>LPMS-ivec</b>: Log power magnitude spectrum based i-vector SV system</h3>
+  <h3><b>MFCC-ivec</b>: Mel-frequency cepstral coefficients based i-vector SV system</h3>
+  <h3><b>MFCC-xvec</b>: Mel-frequency cepstral coefficients based x-vector SV system</h3>
 <!--   <ul>
     <li>Here you will listen to some audios of non-categories in L2 English speech, where the speakers' L1 language is Cantonese. </li>
     <li>Each non-categorical pattern is represented as 'phn1_phn2', indicating that this pattern sounds like a resemblance of two native English phones, 'phn1' and 'phn2'.</li>
     <li>The International Phonetic Alphabet (IPA) form of the native phones is also provided in the parenthesis for your reference.</li>
     <li>For comparison, some audios of native-like pronunciations are also listed below for your reference.</li>
   </ul> -->
+  <h2>Spoofing audios (generated from LPMS-ivec) under different perturbation degree &epsilon;, and the corresponding system response.</h2>
+  <h3><b>TR</b>: True Rejection; <b>FA</b>: False Acceptance</h3>
   <div style="position:absolute;left:60px">
-<ul>
-  <li>Spoofing audios (generated from LPMS-ivec) under different perturbation degree &epsilon;, and also the system response.</li>
-  <li><b>TR</b>: True Rejection; <b>FA</b>: False Acceptance</li>
-<!--   <li>Please <b>turn down</b> the volume before listening audios under <b>&epsilon; above 10.0</b>, they are a bit louder due to additional noise energy.</li>  -->
-</ul>
-<h3> adversarial attacks with &epsilon; = 0.3, 1.0, 5.0, 10.0 </h3>
+    <h3>&epsilon; = 0.3, 1.0, 5.0, 10.0 </h3>
+
     <table border="1">
       <tr>
-        <td align="center" >Target (enroll)</td>
+        <td align="center"> target (enroll)</td>
+      </tr>
+      <tr>
+        <td align="center" >
+          <audio controls="controls" height="100" width="100">
+          <source src="non-target-trials/id10270-5r0dWxy17C8-00003.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+    </table>
+
+    <table border="1">
+      <tr>
+        <td align="center" rowspan="2"> </td>
         <td align="center" >Original (test)</td>
         <td align="center" >&epsilon; = 0.3</td>
         <td align="center" >&epsilon; = 1.0</td>
@@ -58,11 +77,11 @@ audio {
         <td align="center" >&epsilon; = 50.0</td> -->
       </tr>
       <tr>
-        <td align="center" >
+<!--         <td align="center" >
           <audio controls="controls" height="100" width="100">
           <source src="non-target-trials/id10270-5r0dWxy17C8-00003.wav" type="audio/wav">
           </audio>
-        </td>
+        </td> -->
         <td align="center" >
           <audio controls="controls" height="100" width="100">
           <source src="non-target-trials/id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
@@ -139,10 +158,24 @@ audio {
       </tr>
     </table>
 
-<h3> adversarial attacks with &epsilon; = 20.0, 30.0, 50.0 </h3>
+    <h3>&epsilon; = 20.0, 30.0, 50.0 </h3>
+
     <table border="1">
       <tr>
-        <td align="center" >Target (enroll)</td>
+        <td align="center"> target (enroll)</td>
+      </tr>
+      <tr>
+        <td align="center" >
+          <audio controls="controls" height="100" width="100">
+          <source src="non-target-trials/id10270-5r0dWxy17C8-00003.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+    </table>
+
+    <table border="1">
+      <tr>
+        <td align="center" rowspan="2"> </td>
         <td align="center" >Original (test)</td>
 <!--         <td align="center" >&epsilon; = 0.3</td>
         <td align="center" >&epsilon; = 1.0</td>
@@ -153,11 +186,11 @@ audio {
         <td align="center" >&epsilon; = 50.0</td>
       </tr>
       <tr>
-        <td align="center" >
+<!--         <td align="center" >
           <audio controls="controls" height="100" width="100">
           <source src="non-target-trials/id10270-5r0dWxy17C8-00003.wav" type="audio/wav">
           </audio>
-        </td>
+        </td> -->
         <td align="center" >
           <audio controls="controls" height="100" width="100">
           <source src="non-target-trials/id10273-58VB-LYIoRM-00002.wav" type="audio/wav">
